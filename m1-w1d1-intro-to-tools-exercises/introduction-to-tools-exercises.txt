@@ -236,17 +236,40 @@ drwxr-xr-x  3 ttomlin  staff  102 May 21 15:10 ..
 ----
 
 $ <enter the Git command to display status>
-<type or copy-paste the result here>
+On branch master
+Your branch is ahead of 'origin/master' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   ../../../../../../introduction-to-tools-exercises.txt
+	modified:   ../../../../../../../m1-w1d2-variables-and-datatypes-exercises/src/main/java/com/techelevator/Exercises.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Helloworld.java.copy
+
+no changes added to commit (use "git add" and/or "git commit -a")
 
 $ <enter the Git command to "stage" all changes>
-<type or copy-paste the result here>
+*nothing happened
 
 $ <enter the Git command to save all "staged" changes>
-<type or copy-paste the result here>
+[master 956f62d] feature completion
+ 3 files changed, 57 insertions(+), 12 deletions(-)
+ create mode 100644 m1-w1d1-intro-to-tools-exercises/java-helloworld/src/main/java/com/techelevator/Helloworld.java.copy
 
 $ git push
-<type or copy-paste the result here>
-
+Counting objects: 37, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (26/26), done.
+Writing objects: 100% (37/37), 8.35 KiB | 776.00 KiB/s, done.
+Total 37 (delta 7), reused 0 (delta 0)
+To https://bitbucket.org/te-cbus-cohort-5/treytomlin-java-blue-exercises/
+   dce2929..956f62d  master -> master
 
 ----
 16. Delete the backup file, "Helloworld.java.copy" using the remove command.
@@ -257,8 +280,10 @@ $ rm Helloworld.java.copy
 The "rm" parameter is the name of the file to be deleted.
 
 $ <enter command to list all files and folders in order to confirm the file deletion>
-<type or copy-paste the result here>
-
+total 8
+drwxr-xr-x  3 ttomlin  staff  102 May 22 16:45 .
+drwxr-xr-x  3 ttomlin  staff  102 May 21 15:10 ..
+-rw-r--r--  1 ttomlin  staff  141 May 21 15:10 Helloworld.java
 
 ----
 17. Change directory to the java-helloworld folder using either one of the 
@@ -279,7 +304,7 @@ command line when that seems natural.
 Regardless of the option you chose, check your new location.
 
 $ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+/Users/ttomlin/development/treytomlin-java-blue-exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld
 
 
 ----
@@ -290,7 +315,7 @@ $ <enter command to display present working directory>
 $ mkdir docs
 $ <enter the command to change directory to "docs" using a relative path>
 $ <enter command to display present working directory>
-<type or copy-paste your present working directory here>
+/Users/ttomlin/development/treytomlin-java-blue-exercises/m1-w1d1-intro-to-tools-exercises/java-helloworld/docs
 
 ----
 19. Create a new file name "readme.txt" using Visual Studio Code, and add the text
