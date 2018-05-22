@@ -29,7 +29,7 @@ actual command from other text in Unix documentation.
 2.  What does the ~ (tilde) character in the above command to change directory 
     refer to?
 ----
-
+It refers the directory we are currently in. 
 
 ----
 3.  A good habit to develop, especially while you're developing your skills on 
@@ -38,7 +38,7 @@ actual command from other text in Unix documentation.
 ----
 
 $ pwd
-<type or copy-paste the result here>
+/Users/ttomlin/development/treytomlin-java-blue-exercises
 
 The present working directory displayed should match the directory you changed 
 to in Exercise 1.  Note, the two may not match at the very beginning if you
@@ -54,31 +54,35 @@ changes directory, and the "pwd" command reflects this.
 ----
 
 $ ls -la
-<type or copy-paste the result here>
-
+total 8
+drwxr-xr-x   6 ttomlin  staff  204 May 22 15:17 .
+drwxr-xr-x   9 ttomlin  staff  306 May 22 09:50 ..
+drwxr-xr-x  14 ttomlin  staff  476 May 22 15:17 .git
+-rw-r--r--   1 ttomlin  staff  359 May 21 15:10 .gitignore
+drwxr-xr-x   5 ttomlin  staff  170 May 21 15:10 m1-w1d1-intro-to-tools-exercises
+drwxr-xr-x  10 ttomlin  staff  340 May 22 15:24 m1-w1d2-variables-and-datatypes-exercises
 
 ----
 5.  What do the "." and ".." folders displayed in the directory listing in
     Exercise 4 represent?
 ----
 
-<type or copy-paste your answer here>
-
+They represent our current and parent directories, respectivly. 
 ----
 6.  What are the names of the files, including any dot-files, displayed in the
     directory listing in Exercise 4?
 ----
 
-<type or copy-paste your answer here>
+-rw-r--r--   1 ttomlin  staff  359 May 21 15:10 .gitignore
 
 
 ----
 7.  What are the names of the folders, including any dot-folders, displayed in 
     the directory listing in Exercise 4?
 ----
-
-<type or copy-paste your answer here>
-
+drwxr-xr-x  14 ttomlin  staff  476 May 22 15:17 .git
+drwxr-xr-x   5 ttomlin  staff  170 May 21 15:10 m1-w1d1-intro-to-tools-exercises
+drwxr-xr-x  10 ttomlin  staff  340 May 22 15:24 m1-w1d2-variables-and-datatypes-exercises
 
 ----
 8.  pom.xml is a Maven build file. You will learn more about Maven in later 
