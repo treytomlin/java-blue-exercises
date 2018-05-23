@@ -10,9 +10,11 @@ public class Exercises {
 	 sleepIn(false, true) → true
 	 */
 	public boolean sleepIn(boolean weekday, boolean vacation) {
+		if(weekday = true && vacation == false) {
 		return false;
 	}
-
+	return true;
+}
 	/*
 	 2. We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling. 
 	 We are in trouble if they are both smiling or if neither of them is smiling. Return true if we 
@@ -45,7 +47,12 @@ public class Exercises {
 	 diff21(-10) → 31
 	 */
 	public int diff21(int n) {
-		return 0;
+		int difference = Math.abs(21 - n);
+		
+		if (n > 21) {
+			return difference *= 2;
+		}
+		return difference;
 	}
 
 	/*
