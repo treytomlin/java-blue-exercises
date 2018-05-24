@@ -10,11 +10,19 @@ public class Exercises {
 	 sleepIn(false, true) → true
 	 */
 	public boolean sleepIn(boolean weekday, boolean vacation) {
-		if(weekday = true && vacation == false) {
-		return false;
+		if(weekday == false && vacation == false) {
+		return true;
+		}
+		
+		
+		else if(weekday == false && vacation == true) {
+			return true;
+		}
+		else if(weekday == true && vacation == false) {
+			return false;
+		}
 	}
-	return true;
-}
+
 	/*
 	 2. We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling. 
 	 We are in trouble if they are both smiling or if neither of them is smiling. Return true if we 
@@ -24,6 +32,11 @@ public class Exercises {
 	 monkeyTrouble(true, false) → false
 	 */
 	public boolean monkeyTrouble(boolean aSmile, boolean bSmile) {
+		if (aSmile == true && bSmile == true) {
+			return true;
+		} else if (aSmile == false && bSmile == false) {
+			return true;
+	}
 		return false;
 	}
 	
@@ -34,7 +47,14 @@ public class Exercises {
 	 sumDouble(2, 2) → 8
 	 */
 	public int sumDouble(int a, int b) {
-		return 0;
+		if( a == b) {
+			int result = (a + b) * 2;
+			return result;}
+		else {
+			int result = (a + b);
+			return result;
+		}
+		
 	}
 
 	/*
@@ -64,7 +84,15 @@ public class Exercises {
 	 parrotTrouble(false, 6) → false
 	 */
 	public boolean parrotTrouble(boolean talking, int hour) {
-		return false;
+		if(talking == true && hour < 7) {
+			return true;
+		} 
+		else if(talking == true && hour > 20) {
+			return true;
+		}
+		else {
+		
+		return false;}
 	}
 
 	/*
@@ -74,7 +102,14 @@ public class Exercises {
 	 makes10(1, 9) → true
 	 */
 	public boolean makes10(int a, int b) {
-		return false;
+		if((a == 10) || (b== 10)){
+			return true;
+		}
+		else if(a + b == 10) {
+			return true;
+		}
+		else {
+			return false;}
 	}
 
 	/*
@@ -85,8 +120,12 @@ public class Exercises {
 	 posNeg(-4, -5, true) → true
 	 */
 	public boolean posNeg(int a, int b, boolean negative) {
-		return false;
+		if((negative = true) && ((a < 0) && (b <0))){
+			return true;
+		}
 	}
+	
+
 
 	/*
 	 8. Return true if the given non-negative number is a multiple of 3 or a multiple of 5. 
