@@ -10,18 +10,19 @@ public class Exercises {
 	 sleepIn(false, true) → true
 	 */
 	public boolean sleepIn(boolean weekday, boolean vacation) {
-		if(weekday == false && vacation == false) {
-		return true;
+		if(weekday == true && vacation == false) {
+		return false;
 		}
-		
 		
 		else if(weekday == false && vacation == true) {
 			return true;
 		}
-		else if(weekday == true && vacation == false) {
-			return false;
+		
+		else {
+			return true;
 		}
-	}
+		}
+	
 
 	/*
 	 2. We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling. 
@@ -123,6 +124,13 @@ public class Exercises {
 		if((negative = true) && ((a < 0) && (b <0))){
 			return true;
 		}
+		else if((a < 0 && b >= 0)  || (a >= 0 && b < 0)){
+			return true;
+		}
+		
+		else {
+			return false;
+		}
 	}
 	
 
@@ -135,6 +143,9 @@ public class Exercises {
 	 or35(8) → false
 	 */
 	public boolean or35(int n) {
+		if((n % 5 == 0) || (n % 3 == 0)){
+			return true;
+		}
 		return false;
 	}
 
@@ -145,6 +156,12 @@ public class Exercises {
 	 icyHot(2, 120) → false
 	 */
 	public boolean icyHot(int temp1, int temp2) {
+		if((temp1 < 0) && (temp2 > 100)){
+			return true;
+		}
+		else if((temp2 < 0) && (temp1 > 100)) {
+			return true;
+		}
 		return false;
 	}
 
@@ -155,8 +172,14 @@ public class Exercises {
 	 in1020(8, 99) → false
 	 */
 	public boolean in1020(int a, int b) {
+		if(a >= 10 && a <= 20) {
+		return true;
+		}
+		if(b >= 10 && b <= 20) {
+		return true;
+		}
 		return false;
-	}
+		}
 
 	/*
 	 11. We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 3 int values, 
