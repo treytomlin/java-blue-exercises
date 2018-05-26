@@ -1,5 +1,7 @@
 package com.techelevator;
 
+import java.util.Scanner;
+
 /*
  The Fahrenheit to Celsius conversion formula is:
  	Tc = (Tf - 32) / 1.8
@@ -22,7 +24,46 @@ package com.techelevator;
 public class TempConvert {
 
 	public static void main(String[] args) {
+		while (true) {
+			Scanner in = new Scanner(System.in);
+			System.out.println("Enter temperature degrees!");
+			System.out.println("How many degrees?");
+			String userDegreeUnit = in.nextLine().toUpperCase();
+			System.out.print("Enter (C)elcius or (F)erenheit or Q) to quit) >>>");
+			System.out.println("Give me an Integer please! >>");
 
-	}
+			String userInt = in.nextLine().toUpperCase();
+			if(userInt.equals("Q")) {
+				break;
+			}
+				
+				switch(userDegreeUnit){
+				case "M":
+					String meterConversion = userInt;
+					double result = Integer.parseInt(meterConversion) * 3.28 ;
+					System.out.println(userInt + " Meters is " + result + " feet!");
+					break;
+				case "F":
+					String feetConversion = userInt;
+					double result2 = Integer.parseInt(feetConversion) * 0.3048 ;
+					System.out.println(userInt + " Feet is " + result2 + " Meters!");
+					break;
+				
+
+
+			}
+	
+				
+
+		
+			
+					
+			}
+	
+		}
 
 }
+
+	
+
+
