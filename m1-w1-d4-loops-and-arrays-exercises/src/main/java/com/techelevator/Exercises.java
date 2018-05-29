@@ -92,13 +92,15 @@ public class Exercises {
 	 maxEnd3([2, 11, 3]) → [3, 3, 3]
 	 */
 	public int[] maxEnd3(int[] nums) {
-		if(nums[0] < nums[nums.length-1]) {
+		if(nums[0] > nums[2]) {
 			return new int[] {nums[0], nums[0], nums[0]};
+		
 		}
-	
-		else if(nums[0] > nums[nums.length-1]) {
-			return new int[] {nums[nums.length-1], nums[nums.length-1], nums[nums.length-1]};}
+		else if(nums[0] < nums[2]) {
+			return new int[] {nums[2], nums[2], nums[2]};
 		}
+		return nums;
+	}
 	
 
 	/*
@@ -109,8 +111,16 @@ public class Exercises {
 	 sum2([1, 1, 1, 1]) → 2
 	 */
 	public int sum2(int[] nums) {
+		
+		if(nums[0] + nums[1] < 2) {
 		return 0;
 	}
+
+		
+	}
+	
+	
+
 
 	/*
 	 10. Given 2 int arrays, a and b, each length 3, return a new array length 2 containing their middle 

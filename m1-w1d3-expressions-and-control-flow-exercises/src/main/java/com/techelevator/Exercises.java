@@ -121,19 +121,15 @@ public class Exercises {
 	 posNeg(-4, -5, true) → true
 	 */
 	public boolean posNeg(int a, int b, boolean negative) {
-		if((negative = true) && ((a < 0) && (b <0))){
+		if(negative && (a < 0 && b < 0)) {
 			return true;
 		}
-		else if((a < 0 && b >= 0)  || (a >= 0 && b < 0)){
+		if(!negative && (a < 0 ^ b < 0)) {
 			return true;
 		}
-		
-		else {
-			return false;
+		return false;
 		}
-	}
 	
-
 
 	/*
 	 8. Return true if the given non-negative number is a multiple of 3 or a multiple of 5. 
@@ -189,6 +185,15 @@ public class Exercises {
 	 hasTeen(20, 10, 13) → true
 	 */
 	public boolean hasTeen(int a, int b, int c) {
+		if(a >= 13 & a<= 19) {
+			return true;
+		}
+		else if(b >= 13 & b<= 19) {
+			return true;
+		}
+		else if(c >= 13 & c<= 19) {
+			return true;
+		}
 		return false;
 	}
 
@@ -200,6 +205,9 @@ public class Exercises {
 	 loneTeen(13, 13) → false
 	 */
 	public boolean loneTeen(int a, int b) {
+		if((a >= 13 && a<= 19) ^ (b >= 13 && b<= 19) ){
+			return true;
+		} 
 		return false;
 	}
 
@@ -210,9 +218,24 @@ public class Exercises {
 	 intMax(3, 2, 1) → 3
 	 */
 	public int intMax(int a, int b, int c) {
-		return 0;
-	}
-	
+		
+		if((a >= b) && (a >= c)) {
+			int response = a;
+			return response;
+		}
+		else if(( b >= a) && (b >= c)) {
+			int response = b;
+			return response;
+		}
+		else if(( c >= a) && (c >= b)){
+			int response = c;
+			return response;
+		}
+			
+
+			return 0;
+		
+}
 	/*
 	 14. Given 2 int values, return true if they are both in the range 30..40 inclusive, or they are both 
 	 in the range 40..50 inclusive.
@@ -221,6 +244,13 @@ public class Exercises {
 	 in3050(40, 50) → true
 	 */
 	public boolean in3050(int a, int b) {
+		if((a >= 30 && a <= 40) && (b >= 30 && b <= 40)) {
+			return true;
+		}
+		else if((a >= 40 && a <= 50) && (b >= 40 && b <= 50)) {
+			return true;
+		}
+		
 		return false;
 	}
 
@@ -232,6 +262,14 @@ public class Exercises {
 	 max1020(11, 9) → 11
 	 */
 	public int max1020(int a, int b) {
+		if((a >= 10) && (a <= 20) && (a > b)) {
+			int response = a;
+			return response;
+		}
+		else if((b >= 10) && (b <= 20) && (b> a)) {
+			int response = b;
+			return response;
+		}
 		return 0;
 	}
 
@@ -245,6 +283,12 @@ public class Exercises {
 	 cigarParty(70, true) → true
 	 */
 	public boolean cigarParty(int cigars, boolean isWeekend) {
+		if(cigars >= 40 && cigars <= 60 && (!isWeekend)) {
+			return true;
+		}
+		else if((cigars >= 40) && (isWeekend)){
+		return true;
+		}
 		return false;
 	}
 
@@ -259,7 +303,16 @@ public class Exercises {
 	 dateFashion(5, 5) → 1
 	 */
 	public int dateFashion(int you, int date) {
-		return 0;
+		if((you <= 2) || (date <= 2 )){
+			int response = 0;
+			return response;
+		}
+		else if((you >= 8)|| (date >= 8)){
+			int response = 2;
+			return response;
+		}
+		int response = 1;
+		return response;
 	}
 
 	/*
@@ -271,6 +324,12 @@ public class Exercises {
 	 squirrelPlay(95, true) → true
 	 */
 	public boolean squirrelPlay(int temp, boolean isSummer) {
+		if((temp >= 60) && (temp <= 100) && (isSummer)) {
+			return true;
+		}
+		else if(( temp >= 60) && (temp <= 90)) {
+			return true;
+		}
 		return false;
 	}
 
@@ -284,7 +343,57 @@ public class Exercises {
 	 caughtSpeeding(65, true) → 0
 	 */
 	public int caughtSpeeding(int speed, boolean isBirthday) {
-		return 0;
+		int result = 0;
+		if(speed <= 60) {
+			 result = 0;
+			return result;
+		}
+		if((speed <= 65) && (isBirthday)){
+			result = 0;
+			return result;
+		}
+		if(speed >= 65 && (speed <= 85) && (isBirthday)){
+			 result = 1;
+			return result;
+			}
+		
+		
+		if((speed >= 61 && speed <= 80) && (!isBirthday)){
+			result = 1;
+			return result;
+			}
+		
+		
+		else if((speed >= 85) && (isBirthday)) {
+			result = 1;
+			return result;
+		}
+		
+		else if((speed >= 80) && (!isBirthday)) {
+			result = 2;
+			return result;
+		}
+		
+		
+		
+		else if((speed <= 66) && (isBirthday)) {
+			result = 1;
+			return result;
+			}
+		else if((speed <= 65) && (!isBirthday)) {
+			result = 1;
+			return result;
+			}
+		else if((speed <= 66) && (isBirthday)) {
+			result = 1;
+			return result;
+			}
+		else if((speed < 60) && (!isBirthday)) {
+			result = 0;
+			return result;
+			}
+		
+		return result;
 	}
 
 	/*
@@ -295,9 +404,15 @@ public class Exercises {
 	 sortaSum(10, 11) → 21
 	 */
 	public int sortaSum(int a, int b) {
-		return 0;
+		if(a + b >= 10 && a + b <= 19) {
+			int response = 20;
+			return response;
+		}
+		
+		int response = a + b;
+		return response;
 	}
-
+	
 	/*
 	 21. Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat, and a boolean indicating if we are 
 	 on vacation, return a string of the form "7:00" indicating when the alarm clock should ring. Weekdays, 
@@ -308,6 +423,22 @@ public class Exercises {
 	 alarmClock(0, false) → "10:00"
 	 */
 	public String alarmClock(int day, boolean vacation) {
+		if((day >= 1) && (day <= 5) && (vacation)){
+			String response = "10:00";
+			return response;
+		}
+		else if(((day == 6) || (day == 0) ) && (vacation)){
+			String response = "off";
+			return response;
+		}
+		if((day >= 1) && (day <= 5) && (!vacation)){
+			String response = "7:00";
+			return response;
+		}
+		else if((day == 6) || (day == 0) && (!vacation)){
+			String response = "10:00";
+			return response;
+		}
 		return "";
 	}
 
@@ -319,6 +450,13 @@ public class Exercises {
 	 in1To10(11, true) → true
 	 */
 	public boolean in1To10(int n, boolean outsideMode) {
+		if((n <= 1 ||  n>= 10) && outsideMode) {
+			return true;
+		}
+		if((n > 0 && n <= 10) && (!outsideMode)) {
+			return true;
+		}
+		
 		return false;
 	}
 
@@ -331,6 +469,9 @@ public class Exercises {
 	 specialEleven(24) → false
 	 */
 	public boolean specialEleven(int n) {
+		if ((n % 11 == 0) || (n % 11 == 1)) {
+			return true;
+		}
 		return false;
 	}
 
@@ -342,6 +483,9 @@ public class Exercises {
 	 more20(22) → true
 	 */
 	public boolean more20(int n) {
+		if ((n % 20 == 1) || (n % 20 == 2)) {
+			return true;
+		}
 		return false;
 	}
 	
@@ -353,6 +497,10 @@ public class Exercises {
 	 old35(15) → false
 	 */
 	public boolean old35(int n) {
+		if( (n % 3 == 0) ^ (n % 5 == 0)) {
+			return true;
+			
+		}
 		return false;
 	}
 
@@ -365,6 +513,12 @@ public class Exercises {
 	 less20(20) → false
 	 */
 	public boolean less20(int n) {
+		if((n + 1) % 20 == 0)  {
+			return true;
+		}
+		else if((n + 2) % 20 == 0) {
+		return true;
+		}
 		return false;
 	}
 
@@ -376,6 +530,23 @@ public class Exercises {
 	 nearTen(19) → true
 	 */
 	public boolean nearTen(int num) {
+		if( (num % 10 ) == 0) {
+			return true;
+		}
+		else if( ((num + 1) % 10) == 0){
+			return true;
+		}
+		else if( ((num + 2) % 10) == 0) {
+			return true;
+			
+		}
+		else if( ((num - 1) % 10) == 0){
+			return true;
+		}
+		else if( ((num - 2) % 10) == 0) {
+			return true;
+			
+		}
 		return false;
 	}
 
