@@ -111,13 +111,25 @@ public class Exercises {
 	 sum2([1, 1, 1, 1]) → 2
 	 */
 	public int sum2(int[] nums) {
-		
-		if(nums[0] + nums[1] < 2) {
-		return 0;
+		int response = 0;
+		if(nums.length == 2) {
+			response =nums[0] + nums[1];
+			return response;
+		}
+		else if( nums.length == 1) {
+			response = nums[0];
+			return response;
+		}
+		else if (nums.length == 0) {
+			response = 0;
+			return response;
+		}
+		response = nums[0] + nums[1];
+		return response;
 	}
 
-		
-	}
+
+	
 	
 	
 
@@ -141,7 +153,14 @@ public class Exercises {
 	 countEvens([1, 3, 5]) → 0
 	 */
 	public int countEvens(int[] nums) {
-		return 0;
+		int response = 0;
+for( int i = 0; i < nums.length; i++) {
+	if(nums[i] % 2 == 0) {
+		response++;
+	}
+	
+}
+		return response;
 	}
 
 	/*
@@ -153,9 +172,25 @@ public class Exercises {
 	 sum13([1, 2, 2, 1, 13]) → 6
 	 */
 	public int sum13(int[] nums) {
-		return 0;
+		int response = 0;
+		 if(nums.length == 0) {
+			response = 0;
+	
+		}
+		
+		for( int i = 0; i < nums.length; i++) {
+			if(nums[i] != 13) {
+			response = response + nums[i];
+			
+		}
+		
+		}
+			
+	return response;
 	}
-
+	
+		
+	
 	/*
 	 13. Given an array of ints, return true if the array contains a 2 next to a 2 somewhere.
 	 has22([1, 2, 2]) → true
@@ -163,6 +198,8 @@ public class Exercises {
 	 has22([2, 1, 2]) → false
 	 */
 	public boolean has22(int[] nums) {
+		if nums.eq
+	}
 		return false;
 	}
 	
@@ -173,8 +210,16 @@ public class Exercises {
 	 lucky13([1, 2, 4]) → false
 	 */
 	public boolean lucky13(int[] nums) {
-		return false;
+	
+		Boolean response;
+			for( int i = 0; i < nums.length; i++) {
+			
+				if((nums[i] != 1) & nums[i] != 3) {
+				}
+			}
 	}
+	
+	
 
 	/*
 	 15. Given an array of ints, return true if the sum of all the 2's in the array is exactly 8.
@@ -183,6 +228,11 @@ public class Exercises {
 	 sum28([1, 2, 3, 4]) → false
 	 */
 	public boolean sum28(int[] nums) {
+		for( int i = 0; i < nums.length; i++) {
+			if(nums[i] == nums.length) {
+			int arrayLength = nums[i];
+			
+		
 		return false;
 	}
 
