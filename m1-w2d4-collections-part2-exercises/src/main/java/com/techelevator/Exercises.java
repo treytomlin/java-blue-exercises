@@ -1,10 +1,13 @@
 package com.techelevator;
 
+import java.util.HashMap;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class Exercises {
-
+// 1 set problem, the rest are maps
 	/*
 	 * Dictionary/Map Exercises
 	 */
@@ -35,7 +38,31 @@ public class Exercises {
 	 * 
 	 */
 	public String animalGroupName(String animalName) {
-		return null;
+		
+		if(animalName == null || animalName.length() < 1) { // null must come first
+			return "unknown";
+		
+		}
+		// .ignoreCase
+		Map<String, String> animalGroups = new HashMap<String, String>();
+		animalGroups.put("rhino", "Crash");
+		animalGroups.put("giraffe", "Tower");
+		animalGroups.put("elephant", "Herd");
+		animalGroups.put("lion", "Pride");
+		animalGroups.put("crow", "Murder");
+		animalGroups.put("pigeon", "Kit");
+		animalGroups.put("flamingo", "Pat");
+		animalGroups.put("deer", "Herd");
+		animalGroups.put("dog", "Pack");
+		animalGroups.put("crocodile", "Float");
+		
+		String group = animalGroups.get(animalName.toLowerCase());
+		
+		if (group == null) {
+			return "unknown";
+		}
+		
+		return group;
 	}
 
 	/*
@@ -61,7 +88,27 @@ public class Exercises {
 	 * 
 	 */
 	public Double isItOnSale(String itemNumber) {
-		return null;
+		if(itemNumber == null || itemNumber == "") {  // filters out any null 
+			return 0.00;
+		}
+		
+		Map<String, Double> mapOfSkus = new HashMap<String, Double>();
+		mapOfSkus.put("kitchen4001", 0.20);
+		mapOfSkus.put("garage", 0.15);
+		mapOfSkus.put("livingroom", 0.10);
+		mapOfSkus.put("kitchen6073", 0.40);
+		mapOfSkus.put("bedroom3434", 0.60);
+		mapOfSkus.put("bath0073", 0.15);
+		
+		
+		
+		Double skuGroups = mapOfSkus.get(itemNumber.toLowerCase());
+		if(skuGroups == null) { // checks if the value is null
+			return 0.00;  // if so return 0.00
+		}
+		
+		
+		return skuGroups; // return the value 
 	}
 	
 	/*
@@ -75,7 +122,28 @@ public class Exercises {
 	 * 
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
-		return null;
+		int newPeter;
+		int newPaul;
+		
+		
+		if (peterPaul.get("Peter") > 0 &&  peterPaul.get("Paul") < 1000){ 
+			if(peterPaul.get("Peter") % 2 == 0){
+				newPeter = ((peterPaul.get("Peter")) / 2);
+				newPaul = (peterPaul.get("Paul") + (peterPaul.get("Peter") / 2));
+				
+			}
+			else {
+				newPeter = ((peterPaul.get("Peter") + 1) / 2);
+				newPaul = (peterPaul.get("Paul") + (peterPaul.get("Peter") / 2));
+			}
+			
+			peterPaul.put("Peter", newPeter);
+			peterPaul.put("Paul", newPaul);
+			
+		}
+		
+		
+		return peterPaul;
 	}
 	
     /*
@@ -88,7 +156,28 @@ public class Exercises {
 	 * 
 	 */
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
-		return null;
+		int newPeter;
+		int newPaul;
+		int newPartnership;
+	
+		if (peterPaul.get("Peter") >= 5000 &&  peterPaul.get("Paul") >= 10000){ 
+			if(peterPaul.get("Peter") % 2 == 0){
+				newPeter = ((peterPaul.get("Peter")) / 4);
+				newPaul = ((peterPaul.get("Paul") ) / 4);
+			}
+			
+			else {
+				newPeter = ((peterPaul.get("Peter") + 1) / 4);
+				newPaul = (peterPaul.get("Paul") + (peterPaul.get("Peter") / 4));
+				
+			}
+			newPartnership = newPeter + newPaul;
+			peterPaul.put("Peter", newPeter * 3);
+			peterPaul.put("Paul", newPaul * 3);
+			peterPaul.put("PeterPaulPartnership", newPartnership);
+		}
+		return peterPaul;
+		
 	}
 	
 	/*
@@ -100,7 +189,17 @@ public class Exercises {
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
 	public Map<String, String> beginningAndEnding(String[] words) {
-		return null;
+		Map<String, String> ourMap = new HashMap<String, String>();
+		String stringA = "";
+		String stringB = "";
+		
+		
+		for (String beginning : words) {
+			stringA = beginning.substring(0, 1);
+			stringB = beginning.substring(beginning.length() -1);
+			ourMap.put(stringA, stringB);
+		}
+		return ourMap;
 	}
 	
 	/*
@@ -115,7 +214,22 @@ public class Exercises {
 	 * 
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		return null;
+		Map<String, Integer> ourMap = new HashMap<String, Integer>();
+		int counter = 0;
+		
+		for(String letter : words) {
+			ourMap.get(letter);
+			
+			if(ourMap.containsKey(letter)) {
+				if(words.equals(letter)) {
+				counter++;
+			}
+			
+		ourMap.put(letter, counter);
+		
+		}
+			
+		return ourMap;
 	}
 	
 	/*
@@ -130,6 +244,8 @@ public class Exercises {
 	 * 
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
+		Map<Integer, Integer> intCount = new 
+	}
 		return null;
 	}
 	

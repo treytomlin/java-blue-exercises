@@ -80,7 +80,16 @@ public class Exercises {
 		-> ["way", "the", "all", "jingle", "bells", "jingle", "bells", "jingle"]
 	 */
 	public List<String> reverseList(List<String> stringList) {
-		return null;
+		Stack<String> newStack = new Stack<String>();
+		List<String> reversedList = new ArrayList<String>();
+		for (String word : stringList) {
+			newStack.push(word);
+			for( String rWord : newStack){
+				newStack.pop(word);  
+				reversedList.add(rWord);
+			}
+		}
+		return reversedList;
 	}
 
 	/*
