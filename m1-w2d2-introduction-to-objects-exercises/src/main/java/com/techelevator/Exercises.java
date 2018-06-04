@@ -460,8 +460,7 @@ public class Exercises {
 	 stringYak("yak123ya") → "123ya"
 	 */
 	public String stringYak(String str) {
-		String responseString = "";
-		for(i = 0; i < )
+		
 		return null;
 	}
 	

@@ -198,8 +198,7 @@ for( int i = 0; i < nums.length; i++) {
 	 has22([2, 1, 2]) → false
 	 */
 	public boolean has22(int[] nums) {
-		if nums.eq
-	}
+	
 		return false;
 	}
 	
@@ -209,15 +208,15 @@ for( int i = 0; i < nums.length; i++) {
 	 lucky13([1, 2, 3]) → false
 	 lucky13([1, 2, 4]) → false
 	 */
-	public boolean lucky13(int[] nums) {
+	//public boolean lucky13(int[] nums) {
 	
-		Boolean response;
-			for( int i = 0; i < nums.length; i++) {
+	//return true;	
+	//}
+
+	
 			
-				if((nums[i] != 1) & nums[i] != 3) {
-				}
-			}
-	}
+	
+
 	
 	
 
@@ -232,8 +231,10 @@ for( int i = 0; i < nums.length; i++) {
 			if(nums[i] == nums.length) {
 			int arrayLength = nums[i];
 			
-		
+			}
 		return false;
 	}
-
+	return true;
+	}
 }
+

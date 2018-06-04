@@ -10,26 +10,22 @@ public class Calculator {
 	
 	public int add(int addend) {
 		//returns the new currentValue after performing the addition.
-		int addValue = this.currentValue + addend;
-		return addValue;
+		return currentValue += addend;
 	}
 	
 	
 	public int multiply(int multiplier) {
 		// returns the new currentValue after performing the multiplication.
-		int multiValue = this.currentValue * currentValue;
-		return multiValue;
+		return currentValue *= multiplier;
 	}
 	
 	public int subtract(int subtrahend) {
 		// returns the new currentValue after performing the subtraction.
-		int subValue = currentValue - this.currentValue;
-		return subValue;
+		return currentValue -= subtrahend;
 	}
 	public int power(int exponent) {
 		//returns the new currentValue after raising the currentValue by the exponent.
-		int powerValue = (currentValue * currentValue) * this.currentValue;
-		return powerValue;
+		return currentValue = (int) Math.pow(currentValue, exponent);
 		
 	}
 	public void reset() {

@@ -17,15 +17,15 @@ public class Company {
 		}
 		return "large";
 	}
+	
+
 	public double getProfit() {
 		// revenue - expenses
 		return this.revenue - this.expenses;
 	}
 	
 	
-	
-	
-	
+
 	public String getName() {
 		return this.name;
 	}
@@ -36,8 +36,9 @@ public class Company {
 		return NumberOfEmployees;
 	}
 	public void setNumberOfEmployees(int numberOfEmployees) {
-		NumberOfEmployees = numberOfEmployees;
+		this.NumberOfEmployees = numberOfEmployees;
 	}
+	
 	public double getRevenue() {
 		return revenue;
 	}
@@ -50,6 +51,5 @@ public class Company {
 	public void setExpenses(double expenses) {
 		this.expenses = expenses;
 	}
-	
 	
 }

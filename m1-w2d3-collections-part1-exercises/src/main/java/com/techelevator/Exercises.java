@@ -85,7 +85,7 @@ public class Exercises {
 		for (String word : stringList) {
 			newStack.push(word);
 			for( String rWord : newStack){
-				newStack.pop(word);  
+				newStack.pop();  
 				reversedList.add(rWord);
 			}
 		}
