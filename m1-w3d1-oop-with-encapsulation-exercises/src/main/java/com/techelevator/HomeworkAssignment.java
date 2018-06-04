@@ -31,18 +31,19 @@ public class HomeworkAssignment {
 	}
 
 	public String getLetterGrade() {
-		int grade = this.totalMarks / this.possibleMarks; // 
-		double grade2 = grade * 1.00d;
-		if(grade2 >= .90) {
+		double percent = (double)totalMarks / (double)possibleMarks; 
+		
+		
+		if(percent >= .90) {
 			letterGrade = "A";
 		}
-		if(grade2 >= .80 && grade <= .89) {
+		else if(percent >= .80) {
 			letterGrade = "B";
 		}
-		if(grade2 >= .70 && grade <= .79) {
+		else if(percent >= .70 ) {
 			letterGrade = "C";
 		}
-		if(grade2 >= .60 && grade <= .69) {
+		else if(percent >= .60 ) {
 			letterGrade = "D";
 		}
 		else {
