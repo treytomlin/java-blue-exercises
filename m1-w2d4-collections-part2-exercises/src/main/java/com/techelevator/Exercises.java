@@ -214,23 +214,20 @@ public class Exercises {
 	 * 
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		Map<String, Integer> ourMap = new HashMap<String, Integer>();
-		int counter = 0;
-		
-		for(String letter : words) {
+			Map <String, Integer> ourMap = new HashMap <String, Integer>();
+			for (String letter : words) {
 			ourMap.get(letter);
-			
-			if(ourMap.containsKey(letter)) {
-				if(words.equals(letter)) {
-				counter++;
+			if (ourMap.containsKey(letter)) {
+			ourMap.put(letter, ourMap.get(letter) + 1);
 			}
-			
-		ourMap.put(letter, counter);
+			else {
+			ourMap.put(letter, 1);
+			}
+			}
+			return ourMap;
+			}
 		
-		}
-			
-		return ourMap;
-	}
+	
 	
 	/*
 	 * Given an array of int values, return a Map<Integer, Integer> with a key for each int, with the value the 
@@ -244,10 +241,19 @@ public class Exercises {
 	 * 
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
-		Map<Integer, Integer> intCount = new 
-	}
-		return null;
-	}
+		Map <Integer, Integer> ourMap = new HashMap <Integer, Integer>();
+		for (Integer value : ints) {
+		ourMap.get(value);
+		if (ourMap.containsKey(value)) {
+		ourMap.put(value, ourMap.get(value) + 1);
+		}
+		else {
+		ourMap.put(value, 1);
+		}
+		}
+		return ourMap;
+		}
+	
 	
 	/*
 	 * Given an array of strings, return a Map<String, Boolean> where each different string is a key and value
@@ -259,7 +265,16 @@ public class Exercises {
 	 * 
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
-		return null;
+		Map<String, Boolean> newMap = new HashMap<String, Boolean>();
+		
+		for(String word : words) {
+			newMap.get(word);
+			if(newMap.containsKey(word)) {
+				
+			}
+		}
+		
+		return newMap;
 	}
 	
 	/*
