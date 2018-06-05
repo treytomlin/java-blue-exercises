@@ -58,6 +58,7 @@ public class Elevator {
     public boolean isMoving() {
         return moving;
     }
+    
 
     /**
      * Opens the elevator door, as long as it is not moving 

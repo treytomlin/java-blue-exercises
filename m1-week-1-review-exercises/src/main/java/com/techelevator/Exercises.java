@@ -9,6 +9,10 @@ public class Exercises {
 	 arrayCount9([1, 9, 9, 3, 9]) → 3
 	 */
 	public int arrayCount9(int[] nums) {
+		int counter = 0;
+		//for(nums : int) {
+			counter++;
+		//}
 		return 0;
 	}
 

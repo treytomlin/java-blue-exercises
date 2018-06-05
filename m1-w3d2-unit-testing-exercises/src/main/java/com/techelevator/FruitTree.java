@@ -38,6 +38,9 @@ public class FruitTree {
      */
     public boolean PickFruit(int numberOfPieces)
     {
+    	if (numberOfPieces > piecesOfFruitLeft) {
+    		return false;
+    	}
         piecesOfFruitLeft -= numberOfPieces;
         return true;
     }
