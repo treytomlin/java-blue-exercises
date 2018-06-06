@@ -19,25 +19,46 @@ public class Elevator {
 		return doorOpen;
 	}
 
-	void openDoor() {
+	public void openDoor() {
 	//opens the elevator door.
 		doorOpen = true;
 	}
-	void closeDoor() { // closes the elevator door.
+	public void closeDoor() { // closes the elevator door.
 		doorOpen = false;
 	}
 	
-	void goUp(int desiredFloor) {
+	public void goUp(int desiredFloor) {
 	// sends the elevator upward to the desired floor as long as the door is not open. Cannot go past last floor.
-	}
 	
-	void goDown(int desiredFloor) {
+		if(! this.isDoorOpen()) {
+			if(desiredFloor >= this.currentFloor && desiredFloor <= this.totalNumberOfFloors) {
+			this.currentFloor = desiredFloor;
+			} else {
+				this.currentFloor += 0;
+			}	
+			} else {
+				this.currentFloor += 0;
+			}
+		}
+		   
+
+	
+	public void goDown(int desiredFloor) {
 	//sends the elevator downward to the desired floor as long as the door is not open. Cannot go past floor 1.
+		if(! this.isDoorOpen()) {
+			if(desiredFloor >= 1 && desiredFloor <= this.currentFloor) {
+			this.currentFloor = desiredFloor;
+		} else { 
+			this.currentFloor += 0;
+		}
+		}else { 
+			this.currentFloor +=0;
+		}
 	}
 
 	public Elevator(int totalNumberOffloors){
 //indicates how many floors are available to the elevator
-		this.totalNumberOfFloors = totalNumberOffloors;
+		this.numberOfFloors = totalNumberOffloors;
 }
 
 }
