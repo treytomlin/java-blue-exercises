@@ -13,7 +13,7 @@ public class FruitTree {
     public FruitTree(String typeOfFruit, int startingPiecesOfFruit) {
         this.piecesOfFruitLeft = startingPiecesOfFruit;
         this.typeOfFruit = typeOfFruit;
-    }
+    } 
 
     /**
      * Type of fruit on the tree 

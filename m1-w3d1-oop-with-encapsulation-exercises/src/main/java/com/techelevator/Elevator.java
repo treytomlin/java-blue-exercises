@@ -31,7 +31,7 @@ public class Elevator {
 	// sends the elevator upward to the desired floor as long as the door is not open. Cannot go past last floor.
 	
 		if(! this.isDoorOpen()) {
-			if(desiredFloor >= this.currentFloor && desiredFloor <= this.totalNumberOfFloors) {
+			if(desiredFloor >= this.currentFloor && desiredFloor <= this.numberOfFloors) {
 			this.currentFloor = desiredFloor;
 			} else {
 				this.currentFloor += 0;

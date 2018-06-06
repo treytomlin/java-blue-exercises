@@ -57,9 +57,14 @@ public class FruitTreeTest {
 	}
 	
 	@Test
-	public void ppick_all_the_fruit() {
+	public void pick_all_the_fruit() {
 		Assert.assertTrue(fruitTree.PickFruit(20));
 		Assert.assertEquals(0, fruitTree.getPiecesOfFruitLeft());
 	}
 	
+	@Test
+	public void pick_negative_fruit() {
+		Assert.assertFalse(fruitTree.PickFruit(-1));
+		Assert.assertEquals(20, 20);
+	}
 }
