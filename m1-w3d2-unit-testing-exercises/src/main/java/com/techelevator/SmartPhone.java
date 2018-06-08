@@ -11,13 +11,13 @@ public class SmartPhone {
     /**
      * Creates a new smart phone 
      * @param phoneNumber
-     * @param carrier
+     * @param carrier 
      */
     public SmartPhone(String phoneNumber, String carrier)
     {
         this.phoneNumber = phoneNumber;
         this.carrier = carrier;
-    }
+    } 
 
     /**
      * 10-digit phone number
@@ -27,7 +27,7 @@ public class SmartPhone {
         return phoneNumber;            
     }
 
-    /**
+    /** 
      * Phone carrier
      * @return carrier
      */
@@ -66,7 +66,7 @@ public class SmartPhone {
     public boolean isOnCall() {
         return onCall;            
     }
-
+ 
     /**
      * 
      * @param phoneNumberToCall places a phone call<

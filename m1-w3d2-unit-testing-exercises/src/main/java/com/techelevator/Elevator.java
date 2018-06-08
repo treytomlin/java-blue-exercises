@@ -17,8 +17,8 @@ public class Elevator {
         this.shaftNumber = shaftNumber;
         this.numberOfLevels = totalNumberOfFloors;
         this.currentLevel = 1;
-    }
-
+    } 
+  
     /**
      * Elevator Shaft Number 
      * @return shaftNumber
@@ -50,7 +50,7 @@ public class Elevator {
     public boolean isDoorOpen() {
         return doorOpen;
     }
-
+ 
     /**
      * Is elevator door moving 
      * @return moving
@@ -92,9 +92,9 @@ public class Elevator {
         currentLevel = desiredFloor;
 
         if (desiredFloor > currentLevel && desiredFloor <= numberOfLevels && doorOpen)
-        {
+        { 
             return true;
-        }
+        } 
         else
         {
             return false;
@@ -111,10 +111,10 @@ public class Elevator {
         if (!doorOpen && desiredFloor < currentLevel && desiredFloor > 0)
         {
             currentLevel -= desiredFloor;
-            return true;
+            return true; 
         }
 
         return false;
     }
-
+ 
 }

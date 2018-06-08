@@ -19,7 +19,7 @@ public class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
         this.annualSalary = salary;
-    }
+    } 
 
     /**
      * Employee Id

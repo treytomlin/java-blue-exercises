@@ -7,8 +7,8 @@ public class Airplane {
     private int bookedFirstClassSeats = 0;
     private int totalCoachSeats;
     private int bookedCoachSeats = 0;
-
-    /**
+ 
+    /** 
      * Creates a new airplane 
      * @param totalFirstClassSeats Total number of first class seats that can be booked
      * @param totalCoachSeats Total number of coach seats that can be booked
@@ -84,8 +84,8 @@ public class Airplane {
         if (firstClass) {
             bookedFirstClassSeats += totalNumberOfSeats;
             if (totalNumberOfSeats > getAvailableFirstClassSeats()) {
-                return false;
-            }
+                return false; 
+            }  
         }
         else {
             bookedCoachSeats += totalNumberOfSeats;

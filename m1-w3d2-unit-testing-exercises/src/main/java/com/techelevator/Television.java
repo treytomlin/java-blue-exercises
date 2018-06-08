@@ -1,7 +1,7 @@
 package com.techelevator;
 
 public class Television {
-
+ 
     private boolean isOn;
     private int selectedChannel = 3;
     private int currentVolume;
@@ -11,7 +11,7 @@ public class Television {
      */
     public boolean IsOn() {
         return isOn;        
-    }
+    } 
 
     /**
      * Current selected channel number for the tv. Channels are 3 to 18.
@@ -27,7 +27,7 @@ public class Television {
     public int getCurrentVolume() {
         return currentVolume;            
     }
-
+ 
     /**
      * Turns the tv on. Also resets the volume level to 2 
      */

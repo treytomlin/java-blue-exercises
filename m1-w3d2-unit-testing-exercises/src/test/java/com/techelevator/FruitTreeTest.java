@@ -20,7 +20,7 @@ public class FruitTreeTest {
 		//Assert
 		Assert.assertEquals("Fruit Tree has wrong type of fruit","Orange",  fruitType);
 		
-	} 
+	}  
 	
 	@Test
 	public void verify_fruit_tree_starts_with_20_fruits() {
@@ -30,9 +30,9 @@ public class FruitTreeTest {
 		//Assert
 		Assert.assertEquals(20, startingFruit);
 		//Act with an Assert
-		//Assert.assertArrayEquals(20, actuals);fruitTree.getPiecesOfFruitLeft();
+		//Assert.assertArrayEquals (20, actuals);fruitTree.getPiecesOfFruitLeft();
 	}
-	
+	 
 	
 	
 	@Test
@@ -60,8 +60,8 @@ public class FruitTreeTest {
 	public void pick_all_the_fruit() {
 		Assert.assertTrue(fruitTree.PickFruit(20));
 		Assert.assertEquals(0, fruitTree.getPiecesOfFruitLeft());
-	}
-	
+	} 
+	 
 	@Test
 	public void pick_negative_fruit() {
 		Assert.assertFalse(fruitTree.PickFruit(-1));

@@ -12,9 +12,9 @@ public class HomeworkAssignment {
      */
     public HomeworkAssignment(int possibleMarks) {
         this.possibleMarks = possibleMarks;
-    }
+    } 
  
-    /**
+    /** 
      * Total number of marks received 
      * @return
      */
@@ -47,7 +47,7 @@ public class HomeworkAssignment {
     public String getSubmitterName() {
         return submitterName;
     }
-    
+     
     /**
      * Name of the person who submitted the homework assignment 
      * @param submitterName
@@ -55,14 +55,14 @@ public class HomeworkAssignment {
     public void setSubmitterName(String submitterName) {
     	this.submitterName = submitterName;
     }
-
+ 
     /**
      * Letter grade for the assignment. (90-100 A, 80-89 B, 70-79 C, 60-69 D, otherwise F) 
      * @return
      */
     public String getLetterGrade() {
         double percentage = (double)totalMarks / possibleMarks;
-
+ 
         if (percentage >= 0.6) {
             return "D";
         }
