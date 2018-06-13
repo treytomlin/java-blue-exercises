@@ -4,17 +4,18 @@ package com.techelevator;
 public class KataPotter {
 
 	public double getCost(int[] books) {
+		double costOfBooks = 0.00;
 		
-		double totalNumberOfBooks = 0;
-		for (int book : books) {
-		    totalNumberOfBooks += book;
-		
-			return  totalNumberOfBooks;
-			 
+		for(int book : books) {
+			costOfBooks += 8.00 * book;
 		}
-		return 0;
-	}	
-
+		if(costOfBooks >= 16.00) {
+			costOfBooks -= costOfBooks * 0.05;
+		}
+		return costOfBooks;
+		
+	
+	}
 }
 
 

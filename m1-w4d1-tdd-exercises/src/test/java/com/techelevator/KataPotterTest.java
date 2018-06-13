@@ -12,21 +12,31 @@ public class KataPotterTest {
 	
 	@Before
 	public void setup() {
-		int[] newArray = new int[] {1, 2, 3, 4, 5};
 		kataPotter = new KataPotter();
-		Assert.assertEquals(0, newArray);
 	}
 	
 	@Test
 	public void no_books_returns_zero() {
-		
-		kataPotter = new KataPotter();
-		Assert.assertEquals(0, newArray);
+		int[] booksArray = new int[] {0, 0, 0, 0, 0};
+		Assert.assertEquals(0, kataPotter.getCost(booksArray), 0);
 	}	
 	
 	@Test
 	public void one_book_returns_eight() {
-		Assert.assertEquals(0, kataPotter.getCost(b), 0);
+		int[] booksArray = new int[] {1, 0, 0, 0, 0};
+		Assert.assertEquals(8.00, kataPotter.getCost(booksArray), 0);
+
 	}
+	@Test
+	public void two_different_books_yeilds_5_percent_discount() {
+		int[] booksArray = new int[] {1, 1, 0, 0, 0};
+		Assert.assertEquals(15.20, kataPotter.getCost(booksArray), 0);
+		
+		booksArray = new int[] {1, 0, 0, 0, 1};
+		Assert.assertEquals(15.20, kataPotter.getCost(booksArray), 0);
+
+
+	}
+	
 	
 }
