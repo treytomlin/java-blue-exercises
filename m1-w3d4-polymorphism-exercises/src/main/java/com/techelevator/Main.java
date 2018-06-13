@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
 	
-	public static DeliveryDriver[] services = new DeliveryDriver[] {new FexEd(), new PostalFirstClass(), new PostalSecondClass(), new PostalThirdClass()};
+	//public static DeliveryDriver[] services = new DeliveryDriver[]
 
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);

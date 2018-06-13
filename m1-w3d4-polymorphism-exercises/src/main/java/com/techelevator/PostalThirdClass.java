@@ -1,10 +1,10 @@
 package com.techelevator;
 
-public class PostalThirdClass extends DeliveryService implements DeliveryDriver{
+public class PostalThirdClass {
 	public PostalThirdClass() {
-		super(name, weight, distance, rate);
+		//super(name, weight, distance, rate);
 
-	,. `
+	
 	
 	}
 	String name;

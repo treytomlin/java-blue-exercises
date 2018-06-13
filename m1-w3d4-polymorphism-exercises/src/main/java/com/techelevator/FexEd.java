@@ -1,11 +1,9 @@
 package com.techelevator;
 
-public class FexEd extends DeliveryService implements DeliveryDriver{
+public class FexEd {
 
-	public  fexEd(double rate) {
-		super("FexEd", 0, 0, rate);
-			
-		}
+	
+		
 		
 		
 //		rate = 20.00
@@ -15,4 +13,4 @@ public class FexEd extends DeliveryService implements DeliveryDriver{
 //	
 		}
 
-}
+

@@ -4,7 +4,7 @@ public class SpuTwoDay {
 
 	public SpuTwoDay() {
 
-		rate = (weight * 0.050) * distance;
+		//rate = (weight * 0.050) * distance;
 	
 	
 	}
