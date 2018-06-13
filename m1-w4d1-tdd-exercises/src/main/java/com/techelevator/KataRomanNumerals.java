@@ -45,14 +45,15 @@ public class KataRomanNumerals {
 	    }
 	    	
 	    	 public final static Integer toArabic(String romanNumeral) {
-	 	        String i =  arabicMap.floorKey(romanNumeral);
-	 	        if ( romanNumeral.contains(i)) {
+	    		 for(int i = 0; i < romanNumeral.length(); i++);
+	 	        String r =  arabicMap.floorKey(romanNumeral);
+	 	        if ( romanNumeral.contains(r)) {
 	 	            return arabicMap.get(romanNumeral);
-	 	        }
-	 	        return 1;
+	 	        } 
+	 	        return 0;
 	 	    }
-
 	    }
+	    
 	    
 	    
 
