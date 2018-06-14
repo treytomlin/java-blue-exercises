@@ -12,6 +12,10 @@ public class Exercises {
     arrayDeduplication([1, 1, 1]) → [1]
     */
     public int[] arrayDeduplication(int[] nums) {
+    	//Set<int> ourSet = new HashSet<int>();
+    	for(int num : nums) {
+    		
+    	}
         return null;
     }
     
@@ -33,6 +37,9 @@ public class Exercises {
     arraySort([8, 13, 9, 12]) → [8, 9, 12, 13]        
     */
     public int[] arraySort(int[] nums) {
+    	for(int num :nums) {
+    		
+    	}
         return null;
     }
 
@@ -44,8 +51,29 @@ public class Exercises {
     blackjack(19, 22) → 19
     */
     public int blackjack(int a, int b) {
+    	if( a == 21)  {
+    		return a;
+    	}
+    	if(b == 21) {
+    		return b;
+    	}
+    	if((21 % a) > (21 % b)) {
+    		return b;
+    	}
+    	if((21 % a) < (21 % b)) {
+    		return a;
+    	}
+    	if((21 - a) > (21 - b)) {
+    		return b;
+    	}
+    	if((21 - a) < (21 - b)) {
+    		return a;
+    	}
+    	
+    	else {
         return 0;
     }
+    	}
     
     /*
     Given three ints, a b c, return true if one of b or c is "close" (differing from a by at most 1), 
