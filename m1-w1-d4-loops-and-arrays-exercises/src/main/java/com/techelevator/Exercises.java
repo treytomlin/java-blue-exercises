@@ -198,7 +198,12 @@ for( int i = 0; i < nums.length; i++) {
 	 has22([2, 1, 2]) → false
 	 */
 	public boolean has22(int[] nums) {
-	
+		
+		for (int i = 0; i < nums.length - 1; i++) {
+			if (nums[i] == 2 && nums[i + 1] == 2) {
+				return true;
+			}
+		}
 		return false;
 	}
 	
@@ -208,17 +213,17 @@ for( int i = 0; i < nums.length; i++) {
 	 lucky13([1, 2, 3]) → false
 	 lucky13([1, 2, 4]) → false
 	 */
-	//public boolean lucky13(int[] nums) {
 	
-	//return true;	
-	//}
+	public boolean lucky13(int[] nums) {
+	
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] == 1 || nums[i] == 3) {
+				return false;
+			}
+		}
+		return true;
+	}
 
-	
-			
-	
-
-	
-	
 
 	/*
 	 15. Given an array of ints, return true if the sum of all the 2's in the array is exactly 8.
@@ -227,14 +232,15 @@ for( int i = 0; i < nums.length; i++) {
 	 sum28([1, 2, 3, 4]) → false
 	 */
 	public boolean sum28(int[] nums) {
-		for( int i = 0; i < nums.length; i++) {
-			if(nums[i] == nums.length) {
-			int arrayLength = nums[i];
-			
+	
+		int sum = 0;
+		for (int i = 0; i < nums.length; i++) {
+			if (nums[i] == 2) {
+				sum += 2;
 			}
-		return false;
+		}
+		return sum == 8;
 	}
-	return true;
-	}
+
 }
 
