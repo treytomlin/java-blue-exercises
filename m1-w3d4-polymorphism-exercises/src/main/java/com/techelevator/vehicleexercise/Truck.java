@@ -2,6 +2,7 @@ package com.techelevator.vehicleexercise;
 
 import java.math.BigDecimal;
 
+
 public class Truck implements Vehicle {
 	public BigDecimal distanceTraveled = new BigDecimal("0.00");
 	public BigDecimal toll = new BigDecimal("0");

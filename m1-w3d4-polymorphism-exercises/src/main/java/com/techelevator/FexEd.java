@@ -1,27 +1,21 @@
 package com.techelevator;
 
 public class FexEd implements DeliveryDriver {
-public double rate = 20.00;
-	@Override
-	public double calculateRate(int distance, int weight) {
-		if( distance > 500) {
-			rate += 5.00;
-		}
-		if(weight > 48) {
-			rate += 3.00;
-		}
-		return rate;
+
+	public String name = "FexEx Flat Rate";
+
+	public String getName() {
+		return name;
 	}
 
-	
-		
-		
-		
-//		rate = 20.00
-//				if distance > 500 miles then rate = rate + 5.00
-//				if weight > 48 ounces then rate = rate + 3.00
-//		
-//	
-		}
+	@Override
+	public double calculateRate(double distance, double weight) {
+		double Rate = 20.00;
+			if (distance > 500 && weight < 48) {double rateDist = (Rate + 5.00);return rateDist;}
+			else if (distance < 500 && weight > 48) {double rateOz = (Rate + 3.00);return rateOz;}
+			else if (distance > 500 && weight > 48) {double rateDistOz = (Rate + 5.00 + 3.00);return rateDistOz;}
+			else	 return Rate;
 
+	}
 
+}

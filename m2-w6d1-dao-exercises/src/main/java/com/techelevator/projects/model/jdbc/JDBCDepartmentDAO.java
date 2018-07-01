@@ -43,9 +43,17 @@ private Department mapRowToDepartment(SqlRowSet result) {
 }
 	@Override
 	public List<Department> searchDepartmentsByName(String nameSearch) {
-		return new ArrayList<>();
-	}
+		List<Department> searchDepartments = new ArrayList<>();
+		String searchByDepartment = "SELECT * FROM department WHERE name LIKE ?";
+		SqlRowSet searchResult = jdbcTemplate.queryForRowSet(searchByDepartment, "%" + nameSearch + "%");
 
+		
+		while(searchResult.next()) {
+		searchDepartments.add(mapRowToDepartment(searchResult));
+		
+	}
+		return searchDepartments;
+	}
 	@Override
 	public void saveDepartment(Department updatedDepartment) {
 		
@@ -53,7 +61,16 @@ private Department mapRowToDepartment(SqlRowSet result) {
 
 	@Override
 	public Department createDepartment(Department newDepartment) {
-		return null;
+		List<Department> createdDepartments = new ArrayList<>();
+		String createdDepartment = "SELECT * FROM department WHERE name LIKE ?";
+		SqlRowSet createdDepartment = jdbcTemplate.queryForRowSet(createdDepartment, "%" + newDepartment + "%");
+
+		
+		while(newDepartment.next()) {
+		createdDepartments.add(mapRowToDepartment(createdDepartment));
+		
+	}
+		return createdDepartments;
 	}
 
 	@Override

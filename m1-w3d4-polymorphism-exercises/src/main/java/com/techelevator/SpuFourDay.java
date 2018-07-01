@@ -1,16 +1,16 @@
 package com.techelevator;
 
 public class SpuFourDay implements DeliveryDriver {
-public double rate;
-	@Override
-	public double calculateRate(int distance, int weight) {
-		rate = (weight * 0.0050) * distance;
-		return 0;
+	
+	public String name = "SPU Four Day Ground";
+
+	public String getName() {
+		return name;
 	}
 
-
-		//rate = (weight * 0.0050) * distance;
-	
-	
+	@Override
+	public double calculateRate(double distance, double weight) {
+		double groundRate = (weight * 5) * distance; double rate = (groundRate / 1000); return rate;
+	}
 
 }

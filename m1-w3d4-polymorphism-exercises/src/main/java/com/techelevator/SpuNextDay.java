@@ -1,13 +1,16 @@
 package com.techelevator;
 
-public class SpuNextDay implements DeliveryDriver {
-public double rate;
-	@Override
-	public double calculateRate(int distance, int weight) {
-		rate = (weight * 0.075) * distance;
-		return rate;
+	public class SpuNextDay implements DeliveryDriver {
+		
+		public String name = "SPU Next Day";
+
+		public String getName() {
+			return name;
+		}
+
+		@Override
+		public double calculateRate(double distance, double weight) {
+			double nextRate = (weight * 75) * distance; double rate = (nextRate / 1000); return rate;
+		}
+
 	}
-
-		//rate = (weight * 0.075) * distance;
-
-}

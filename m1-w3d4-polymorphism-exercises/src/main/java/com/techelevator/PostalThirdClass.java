@@ -1,26 +1,30 @@
 package com.techelevator;
 
-import java.math.BigDecimal;
 
-public class PostalThirdClass implements DeliveryDriver {
-public double rate;
-	@Override
-	public double calculateRate(int distance, int weight) {
-		if(weight >= 0 && weight <=2){
-			BigDecimal bd = new BigDecimal(0.035 * distance);
-			bd = bd.setScale(2, BigDecimal.ROUND_HALF_UP);
-			rate = bd.doubleValue();
-		}
-		if(weight >= 3 && weight <= 8) {
-			rate = 0.040 * distance;
-		}
-		if(weight >= 9 && weight <= 15) {
-			BigDecimal bd = new BigDecimal(0.047 * distance);
-			bd = bd.setScale(2, BigDecimal.ROUND_HALF_UP);
-			rate = bd.doubleValue();
-		}		
-		return rate;
+	public class PostalThirdClass implements DeliveryDriver {
+
+	public String name = "Postal Service 3rd Class";
+			
+			
+	public String getName() {
+		return name;
 	}
-	
-	
+			
+	@Override
+	public double calculateRate(double distance, double weight) {
+			
+	double perMileRate = 0;
+	if (weight <= 2) perMileRate = 35;
+	else if (weight <= 8) perMileRate = 40;	
+	else if (weight <= 15) perMileRate = 47;
+	else if (weight <= 48) perMileRate = 195;
+	else if (weight <= 128) perMileRate = 450;
+	else  perMileRate = 500;
+				
+	double rate = (perMileRate * distance) / 100000;
+	return rate;
+				
+	}
+			
+			
 }
