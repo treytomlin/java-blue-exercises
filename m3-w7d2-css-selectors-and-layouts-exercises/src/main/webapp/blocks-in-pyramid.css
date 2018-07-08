@@ -1,0 +1,81 @@
+html {
+    font: 0px Courier;
+}
+
+.even {
+    background-color: #44accf;
+    font: 96px Courier;
+    color: white;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+
+.odd {
+    background-color: #ee3e64;
+    font: 96px Courier;
+    color: white;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+}
+
+#box_0 {
+    display: inline-block;
+    position: relative;
+    left: 500px;
+}
+
+#box_1 {
+    display: inline-block;
+    position: relative;
+    left: 450px;
+}
+
+#box_2 {
+    display: inline-block;
+    position: relative;
+    left: 450px;
+}
+
+#box_3 {
+    display: inline-block;
+    position: relative;
+    left: 400px;
+}
+
+#box_4 {
+    display: inline-block;
+    position: relative;
+    left: 400px;
+}
+
+#box_5 {
+    display: inline-block;
+    position: relative;
+    left: 400px;
+}
+
+#box_6 {
+    display: inline-block;
+    position: relative;
+    left: 350px;
+}
+
+#box_7 {
+    display: inline-block;
+    position: relative;
+    left: 350px;
+}
+
+#box_8 {
+    display: inline-block;
+    position: relative;
+    left: 350px;
+}
+
+#box_9 {
+    display: inline-block;
+    position: relative;
+    left: 350px;
+}

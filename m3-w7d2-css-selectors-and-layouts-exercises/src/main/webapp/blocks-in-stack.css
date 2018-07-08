@@ -1,0 +1,19 @@
+html {
+    font: 96px Courier;
+}
+
+
+.layer > .odd {
+    background-color: #ee3e64;
+    width: 50px;
+}
+
+.layer > .even {
+    background-color: #44accf;
+    width: 50px;
+}
+
+.layer {
+    display: flex;
+    flex-direction: column;
+}
