@@ -24,6 +24,15 @@
 			 
 			See exercise3-echo.png for example output
 		 --%>
+		 
+		  <c:set var = "word" value = "Hello" />
+		  <c:set var = "count" value = "30" />
+		  <c:forEach begin="0" end="${count}">
+		  	<li style="font-size:${count}px"><c:out value="${word}"/></li>
+		  	<c:set var="count" value="${count - 1}" />
+		  
+		  
+		  </c:forEach>
 		</ul>
 		
 	</body>
