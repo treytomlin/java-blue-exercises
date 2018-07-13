@@ -16,10 +16,12 @@ public class ActorSearchController {
 
 	@Autowired
 	private ActorDao actorDao;
+	
+	@RequestMapping("/actorSearchForm")
 
 	/* What request mapping do we want here */
 	public String showSearchActorForm() {
-		return null;
+		return "actorSearchForm";
 	}
 
 	/* What about here? */
