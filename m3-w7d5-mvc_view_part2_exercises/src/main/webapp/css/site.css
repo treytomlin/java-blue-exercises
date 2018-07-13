@@ -56,3 +56,157 @@ section {
 	background-color: #FFF;
 	border-radius: 7px;
 }
+
+/* Styles for List/Tile/Detail Views */
+
+.list-container, .tile-container, .detail-container {
+	margin: 0 73px;
+}
+
+.list-container .row {
+	display: grid;
+	grid-template-columns: 25% 75%;
+	border-bottom: 1px solid #ACACAC;
+	margin-bottom: 16px;
+}
+
+.list-container .left, .detail-container .detail-left {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+.list-container .left .photo, .tile-container .photo, .detail-container .photo {
+	max-width: 100%;
+}
+
+.list-container .right, .detail-container .detail-right {
+	text-align: left;
+	margin: 0 0 16px 32px;
+}
+
+.list-container .right h3, .tile-container h3, .detail-container h3 {
+	font-size: 20px;
+	margin: 0;
+}
+
+.list-container .right h3 a, .tile-container h3 a {
+	text-decoration: none;
+	color: #000;
+}
+
+.list-container .right h3 a:hover, .tile-container h3 a:hover, .table-container a:hover {
+	color: #0099CC;
+	cursor: pointer;
+}
+
+.list-container .right h4, .tile-container h4, .detail-container h4 {
+	font-size: 22px;
+	margin: 0;
+	color: #AF2B1A;
+}
+
+.list-container .right p, .tile-container p, .detail-container p {
+	margin: 0;
+}
+
+.list-container .right h3 span, .tile-container h3 span, .detail-container h3 span {
+	text-transform: uppercase;
+	color: #FC1927;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.list-container .right span, .tile-container span, .detail-container span {
+	color: #179CCA;
+}
+
+.list-container .right .star, .tile-container .star, .detail-container .detail-right .star {
+	height: 1em;
+}
+
+.tile-container {
+	display: grid;
+	grid-template-columns: 3fr 3fr 3fr;
+}
+
+.tile-container h4 {
+	margin-top: 16px;
+}
+
+.tile-container .img-container {
+	padding-top: 80%;
+	position: relative;
+}
+
+.tile-container .img-container img {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.detail-container {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+/* Styles for Table View */
+
+.table-container {
+	margin: 0 16px;
+}
+
+.table-container th {
+	text-align: left;
+	width: 100px;
+}
+
+.table-container .photo {
+	max-width: 75%;
+	margin-bottom: 10px;
+}
+
+.table-container tr:first-child td {
+	position: relative;
+}
+
+.table-container .best-seller-container {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+}
+
+.table-container span {
+	text-transform: uppercase;
+	color: #FC1927;
+	font-size: 12px;
+	display: block;
+	position: relative;
+	left: -50%;
+}
+
+.table-container {
+	margin: 0;
+}
+
+.table-container tr:nth-child(even) td {
+	background-color: #D3D3D3;
+}
+
+.table-container .star {
+	max-height: 1em;
+	max-width: 100%;
+}
+
+.table-container h4 {
+	font-size: 18px;
+	margin: 0;
+	color: #AF2B1A;
+}
+
+.table-container a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #000;
+}
