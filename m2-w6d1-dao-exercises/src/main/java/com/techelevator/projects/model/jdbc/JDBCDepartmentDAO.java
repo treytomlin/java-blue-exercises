@@ -18,64 +18,78 @@ public class JDBCDepartmentDAO implements DepartmentDAO {
 	public JDBCDepartmentDAO(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
-	
-	
-
 
 	@Override
 	public List<Department> getAllDepartments() {
 		
-		List<Department> departments = new ArrayList<>();
-		String selectAllDepartments = "SELECT * FROM department";
+		List<Department> departments = new ArrayList<Department>();
+		String selectAllDepartments = "select * from department";
 		SqlRowSet result = jdbcTemplate.queryForRowSet(selectAllDepartments);
 		
 		while(result.next()) {
-		departments.add(mapRowToDepartment(result));
+			departments.add(mapRowToDepartment(result));
+		}
 		
-	}
 		return departments;
 	}
-private Department mapRowToDepartment(SqlRowSet result) {
-	Department department = new Department();
-	department.setId(result.getLong("department_id"));
-	department.setName(result.getString("name"));
-	return department;
-}
+
 	@Override
 	public List<Department> searchDepartmentsByName(String nameSearch) {
-		List<Department> searchDepartments = new ArrayList<>();
-		String searchByDepartment = "SELECT * FROM department WHERE name LIKE ?";
-		SqlRowSet searchResult = jdbcTemplate.queryForRowSet(searchByDepartment, "%" + nameSearch + "%");
+		List<Department> departments = new ArrayList<Department>();
+		String findDepartmentByName = "select * from department where name like ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(findDepartmentByName, "%" + nameSearch + "%");
+		
+		while(results.next()) {
+			Department theDepartment = mapRowToDepartment(results);
+			departments.add(theDepartment);
+		}
+		return departments;
+	}
 
-		
-		while(searchResult.next()) {
-		searchDepartments.add(mapRowToDepartment(searchResult));
-		
-	}
-		return searchDepartments;
-	}
 	@Override
 	public void saveDepartment(Department updatedDepartment) {
-		
+		String sqlUpdateDepartmentName = "update department set name= ? where department_id = ?";
+		jdbcTemplate.update(sqlUpdateDepartmentName, updatedDepartment.getName(), updatedDepartment.getId());
 	}
 
 	@Override
 	public Department createDepartment(Department newDepartment) {
-		List<Department> createdDepartments = new ArrayList<>();
-		String createdDepartment = "SELECT * FROM department WHERE name LIKE ?";
-		SqlRowSet createdDepartment = jdbcTemplate.queryForRowSet(createdDepartment, "%" + newDepartment + "%");
-
-		
-		while(newDepartment.next()) {
-		createdDepartments.add(mapRowToDepartment(createdDepartment));
-		
-	}
-		return createdDepartments;
+		String sqlInsertDepartment = "INSERT INTO department(department_id, name) VALUES(?, ?)";
+		newDepartment.setId(getNextDepartmentId());
+		jdbcTemplate.update(sqlInsertDepartment, newDepartment.getId(), newDepartment.getName());
+		return newDepartment;
 	}
 
 	@Override
 	public Department getDepartmentById(Long id) {
-		return null;
+		String sqlSelectById = "select department_id, name from department where department_id = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectById, id);
+			while(results.next()) { //was getting error without this
+				Department theDepartment = mapRowToDepartment(results);
+				return theDepartment;
+			}
+return null;
+			
+		}
+		
+		
+	
+	
+	private Department mapRowToDepartment(SqlRowSet results) {
+		Department theDepartment;
+		theDepartment = new Department();
+		theDepartment.setId(results.getLong("department_id"));
+		theDepartment.setName(results.getString("name"));
+		return theDepartment;
+	}
+	
+	private long getNextDepartmentId() {
+		SqlRowSet nextIdResult = jdbcTemplate.queryForRowSet("SELECT nextval('seq_department_id')");
+		if(nextIdResult.next()) {
+			return nextIdResult.getLong(1);
+		} else {
+			throw new RuntimeException("Something went wrong while getting an id for the new city");
+		}
 	}
 
 }
