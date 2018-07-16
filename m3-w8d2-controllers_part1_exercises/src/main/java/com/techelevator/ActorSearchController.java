@@ -1,15 +1,15 @@
 package com.techelevator;
 
-import java.util.Map;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 
 import com.techelevator.dao.ActorDao;
+import com.techelevator.dao.model.Actor;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller 
 public class ActorSearchController {
@@ -24,9 +24,12 @@ public class ActorSearchController {
 		return "actorSearchForm";
 	}
 
-	/* What about here? */
-	public String searchActors(/* What arguments go here to get parameters from the page? */) {
+	@RequestMapping("/actorSearch")
+	public String searchActors(HttpServletRequest request) {
 		/* Call the model and pass values to the jsp */
-		return null;
+		String name = request.getParameter("lastName"); // gets the parameter from request from url
+		List<Actor> actors = actorDao.getMatchingActors(name); // cal's method from dao and searchs name from request and puts it in list
+		request.setAttribute("actors",  actors); // sets the result in list to a variab;e to be used in the view(actorList.jsp)
+		return "actorList";   // return the name of the jsp to display 
 	}
 }

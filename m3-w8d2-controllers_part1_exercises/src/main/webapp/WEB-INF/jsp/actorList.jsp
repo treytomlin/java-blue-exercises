@@ -10,7 +10,7 @@
 </tr>
 <c:forEach items="${actors}" var="actor">
 <tr>
-    <!-- What do we print here for each actor? -->
+	<td> ${actor.lastName}, ${actor.firstName}</td> 
 </tr>
 </c:forEach>
 </table>
